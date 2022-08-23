@@ -1,0 +1,16 @@
+
+
+void moveZeroes(int* nums, int numsSize){
+int a = 0, b = 0;
+    
+    while(b < numsSize){
+        while(b < numsSize && nums[b] == 0) 
+            b++;
+        if(b < numsSize && a < b){
+            nums[a] = nums[b];
+            nums[b] = 0;
+        }
+        a++;
+        b++;
+    }
+}
