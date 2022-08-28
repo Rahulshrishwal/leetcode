@@ -1,0 +1,23 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        int a=x,rev=0;
+    
+    if(x<0 || x> INT_MAX)
+        return false;
+    
+        string s = to_string(x);
+            int strt = 0;
+            int e = s.length() - 1;
+
+            while(strt < e)
+            {
+                if(s[strt++] != s[e--])
+                    return false;
+            }
+
+            return true;
+        
+        
+    }
+};
